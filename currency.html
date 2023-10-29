@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foreign Exchange</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="currency.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/chartjs-plugin-gradient"></script>
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-annotation/3.0.1/chartjs-plugin-annotation.min.js" integrity="sha512-Hn1w6YiiFw6p6S2lXv6yKeqTk0PLVzeCwWY9n32beuPjQ5HLcvz5l2QsP+KilEr1ws37rCTw3bZpvfvVIeTh0Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</head>
+<body>
+    <main>
+        <h1>Global Currency Converter: <br> Find the Best Rates <br> for Your Money</h1>
+        <img src="/images/1.main.png" alt="">
+
+        <svg class="pound" xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="512" viewBox="0 0 24 24" width="512" data-name="Layer 1"><path d="m20.5 21h-12.007a8.213 8.213 0 0 0 .507-3v-4h5.5a1.5 1.5 0 0 0 0-3h-5.5v-3a5.013 5.013 0 0 1 10-.5 1.5 1.5 0 0 0 3 0c0-3.995-3.738-7.5-8-7.5a8.009 8.009 0 0 0 -8 8v3h-1.5a1.5 1.5 0 0 0 0 3h1.5v4c0 2.583-.737 3-2.5 3a1.5 1.5 0 0 0 0 3h17a1.5 1.5 0 0 0 0-3z"/></svg>
+        <svg class="dollar" xmlns="http://www.w3.org/2000/svg" id="Isolation_Mode" data-name="Isolation Mode" viewBox="0 0 24 24" width="512" height="512"><path d="M20,8V7.313A5.32,5.32,0,0,0,14.687,2H13.5V0h-3V2H9.313A5.313,5.313,0,0,0,7.772,12.4l2.728.746V19H9.313A2.316,2.316,0,0,1,7,16.687V16H4v.687A5.32,5.32,0,0,0,9.313,22H10.5v2h3V22h1.187a5.313,5.313,0,0,0,1.541-10.4L13.5,10.856V5h1.187A2.316,2.316,0,0,1,17,7.313V8Zm-4.618,6.479a2.314,2.314,0,0,1-.7,4.521H13.5V13.965ZM10.5,10.035,8.618,9.521A2.314,2.314,0,0,1,9.313,5H10.5Z"/></svg>
+        <svg class="euro" xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="512" viewBox="0 0 24 24" width="512" data-name="Layer 1"><path d="m20.943 17.727a8.989 8.989 0 0 1 -14.993-1.727h8.55a1.5 1.5 0 0 0 0-3h-9.441a8.5 8.5 0 0 1 0-2h9.441a1.5 1.5 0 0 0 0-3h-8.55a8.989 8.989 0 0 1 14.993-1.727 1.5 1.5 0 1 0 2.314-1.91 11.989 11.989 0 0 0 -20.557 3.637h-1.2a1.5 1.5 0 0 0 0 3h.551c-.028.331-.051.662-.051 1s.023.669.051 1h-.551a1.5 1.5 0 0 0 0 3h1.2a11.989 11.989 0 0 0 20.557 3.637 1.5 1.5 0 1 0 -2.314-1.91z"/></svg>
+
+    </main>
+
+    <span>Our web-based Foreign Exchange App allows you to view live exchange rates, set a base value for conversions, access 24/7 rate updates, and analyze historical currency trends, along with many more features.</span>
+    
+
+    <div class="table">
+        <div class="base-currency-holder">
+            <img src="/images/EUR.png" alt="">
+            <svg class="caret" xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 256 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M246.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-128-128c-9.2-9.2-22.9-11.9-34.9-6.9s-19.8 16.6-19.8 29.6l0 256c0 12.9 7.8 24.6 19.8 29.6s25.7 2.2 34.9-6.9l128-128z"/></svg>
+        
+            
+        </div>
+        <div class="dropdown">
+        </div>
+        
+
+        <div class="desc">
+            <span>Name</span>
+            <span>Current Rate</span>
+            <span>%24h move</span>
+        </div>
+
+        <div class="currenciesWrapper">
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+            <div class="before-load"><div class="double"> <div></div><div></div> </div> <div></div> <div></div></div>
+        </div>
+
+        <svg class="yen" xmlns="http://www.w3.org/2000/svg" id="Layer_1" height="512" viewBox="0 0 24 24" width="512" data-name="Layer 1"><path d="m22.408.306a1.5 1.5 0 0 0 -2.1.286l-8.308 10.929-8.306-10.929a1.5 1.5 0 0 0 -2.388 1.816l8.05 10.592h-2.856a1.5 1.5 0 0 0 0 3h4v2h-4a1.5 1.5 0 0 0 0 3h4v1.5a1.5 1.5 0 0 0 3 0v-1.5h4a1.5 1.5 0 0 0 0-3h-4v-2h4a1.5 1.5 0 0 0 0-3h-2.856l8.05-10.592a1.5 1.5 0 0 0 -.286-2.102z"/></svg>
+
+        <svg class="rupee" xmlns="http://www.w3.org/2000/svg" id="Layer_1" data-name="Layer 1" viewBox="0 0 24 24" width="512" height="512"><path d="M21,6.5c0,.83-.67,1.5-1.5,1.5h-1.52c-.26,3.9-3.52,7-7.48,7h-1.8l7.75,6.34c.64,.52,.74,1.47,.21,2.11-.3,.36-.73,.55-1.16,.55-.33,0-.67-.11-.95-.34L3.55,14.66c-.49-.4-.68-1.07-.46-1.67,.21-.6,.78-1,1.41-1h6c2.31,0,4.22-1.75,4.47-4H4.5c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5H14.24c-.81-1.21-2.18-2-3.74-2H4.5c-.83,0-1.5-.67-1.5-1.5s.67-1.5,1.5-1.5h15c.83,0,1.5,.67,1.5,1.5s-.67,1.5-1.5,1.5h-3c.45,.6,.82,1.28,1.08,2h1.93c.83,0,1.5,.67,1.5,1.5Z"/></svg>
+    </div>
+
+    <footer>
+        <div>
+            <a href=""><span>How does it work?</span></a>
+            <a href=""><span>Why Us?</span></a>
+            <a href=""><span>Partnerships</span></a>
+            <a href=""><span>Terms of Service</span></a>
+            <a href=""><span>Privacy Policy</span></a>
+            <a href=""><span>Careers</span></a>
+            <a href=""><span>About US</span></a>
+            <a href=""><span>Legal</span></a>
+        </div>
+        <div class="media">
+            <span>Find us on:</span>
+            <div>
+                <img src="/images/instagram.png" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. --><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8L200.7 275.5 26.8 48H172.4L272.9 180.9 389.2 48zM364.4 421.8h39.1L151.1 88h-42L364.4 421.8z"/></svg>
+                <img src="/images/facebook.png" alt="">
+                <img src="/images/linkedin.png" alt="">
+                <img src="/images/telegram.png" alt="">
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="48" height="48" viewBox="0 0 48 48"><path fill="#fff" d="M4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98c-0.001,0,0,0,0,0h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303z"></path><path fill="#fff" d="M4.868,43.803c-0.132,0-0.26-0.052-0.355-0.148c-0.125-0.127-0.174-0.312-0.127-0.483l2.639-9.636c-1.636-2.906-2.499-6.206-2.497-9.556C4.532,13.238,13.273,4.5,24.014,4.5c5.21,0.002,10.105,2.031,13.784,5.713c3.679,3.683,5.704,8.577,5.702,13.781c-0.004,10.741-8.746,19.48-19.486,19.48c-3.189-0.001-6.344-0.788-9.144-2.277l-9.875,2.589C4.953,43.798,4.911,43.803,4.868,43.803z"></path><path fill="#cfd8dc" d="M24.014,5c5.079,0.002,9.845,1.979,13.43,5.566c3.584,3.588,5.558,8.356,5.556,13.428c-0.004,10.465-8.522,18.98-18.986,18.98h-0.008c-3.177-0.001-6.3-0.798-9.073-2.311L4.868,43.303l2.694-9.835C5.9,30.59,5.026,27.324,5.027,23.979C5.032,13.514,13.548,5,24.014,5 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974C24.014,42.974,24.014,42.974,24.014,42.974 M24.014,4C24.014,4,24.014,4,24.014,4C12.998,4,4.032,12.962,4.027,23.979c-0.001,3.367,0.849,6.685,2.461,9.622l-2.585,9.439c-0.094,0.345,0.002,0.713,0.254,0.967c0.19,0.192,0.447,0.297,0.711,0.297c0.085,0,0.17-0.011,0.254-0.033l9.687-2.54c2.828,1.468,5.998,2.243,9.197,2.244c11.024,0,19.99-8.963,19.995-19.98c0.002-5.339-2.075-10.359-5.848-14.135C34.378,6.083,29.357,4.002,24.014,4L24.014,4z"></path><path fill="#40c351" d="M35.176,12.832c-2.98-2.982-6.941-4.625-11.157-4.626c-8.704,0-15.783,7.076-15.787,15.774c-0.001,2.981,0.833,5.883,2.413,8.396l0.376,0.597l-1.595,5.821l5.973-1.566l0.577,0.342c2.422,1.438,5.2,2.198,8.032,2.199h0.006c8.698,0,15.777-7.077,15.78-15.776C39.795,19.778,38.156,15.814,35.176,12.832z"></path><path fill="#fff" fill-rule="evenodd" d="M19.268,16.045c-0.355-0.79-0.729-0.806-1.068-0.82c-0.277-0.012-0.593-0.011-0.909-0.011c-0.316,0-0.83,0.119-1.265,0.594c-0.435,0.475-1.661,1.622-1.661,3.956c0,2.334,1.7,4.59,1.937,4.906c0.237,0.316,3.282,5.259,8.104,7.161c4.007,1.58,4.823,1.266,5.693,1.187c0.87-0.079,2.807-1.147,3.202-2.255c0.395-1.108,0.395-2.057,0.277-2.255c-0.119-0.198-0.435-0.316-0.909-0.554s-2.807-1.385-3.242-1.543c-0.435-0.158-0.751-0.237-1.068,0.238c-0.316,0.474-1.225,1.543-1.502,1.859c-0.277,0.317-0.554,0.357-1.028,0.119c-0.474-0.238-2.002-0.738-3.815-2.354c-1.41-1.257-2.362-2.81-2.639-3.285c-0.277-0.474-0.03-0.731,0.208-0.968c0.213-0.213,0.474-0.554,0.712-0.831c0.237-0.277,0.316-0.475,0.474-0.791c0.158-0.317,0.079-0.594-0.04-0.831C20.612,19.329,19.69,16.983,19.268,16.045z" clip-rule="evenodd"></path></svg>
+            </div>
+        </div>
+
+        <span class="rights-reserved"></span>
+    </footer>
+
+    <div class="overlay">
+        
+    </div>
+</body>
+</html>
+
+
+
+
